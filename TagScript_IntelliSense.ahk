@@ -28,170 +28,170 @@ Return
 ;---------------------------------
 
 ; --- {user} Object ---
-:c*:{user::
+:C*:{user::
 SendRaw {user}
 return
 
-:c*:{uav::
+:C*:{uav::
 SendRaw {user(avatar)}
 return
 
-:c*:{uid::
+:C*:{uid::
 SendRaw {user(id)}
 return
 
-:c*:{umen::
+:C*:{umen::
 SendRaw {user(mention)}
 return
 
-:c*:{ucat::
+:C*:{ucat::
 SendRaw {user(created_at)}
 return
 
-:c*:{ujat::
+:C*:{ujat::
 SendRaw {user(joined_at)}
 return
 
-:c*:{uco::
+:C*:{uco::
 SendRaw {user(color)}
 return
 
-:c*:{uname::
+:C*:{uname::
 SendRaw {user(name)}
 return
 
-:c*:{uprop::
+:C*:{uprop::
 SendRaw {user(proper)}
 return
 
-:c*:{uroles::
+:C*:{uroles::
 SendRaw {user(roleids)}
 return
 
-:c*:{urid::
+:C*:{urid::
 SendRaw {user(roleids)}
 return
 
-:c*:{upos::
+:C*:{upos::
 SendRaw {user(position)}
 return
 
 ; --- {target} Object ---
-:c*:{tar::
+:C*:{tar::
 SendRaw {target}
 return
 
-:c*:{tav::
+:C*:{tav::
 SendRaw {target(avatar)}
 return
 
-:c*:{tid::
+:C*:{tid::
 SendRaw {target(id)}
 return
 
-:c*:{tm::
+:C*:{tm::
 SendRaw {target(mention)}
 return
 
-:c*:{tcat::
+:C*:{tcat::
 SendRaw {target(created_at)}
 return
 
-:c*:{tjat::
+:C*:{tjat::
 SendRaw {target(joined_at)}
 return
 
-:c*:{tco::
+:C*:{tco::
 SendRaw {target(color)}
 return
 
-:c*:{tname::
+:C*:{tname::
 SendRaw {target(name)}
 return
 
-:c*:{tprop::
+:C*:{tprop::
 SendRaw {target(proper)}
 return
 
-:c*:{troles::
+:C*:{troles::
 SendRaw {target(roleids)}
 return
 
-:c*:{trid::
+:C*:{trid::
 SendRaw {target(roleids)}
 return
 
-:c*:{tpos::
+:C*:{tpos::
 SendRaw {target(position)}
 return
 
 ; --- {server} Object---
-:c*:{ser::
+:C*:{ser::
 SendRaw {server}
 return
 
-:c*:{sic::
+:C*:{sic::
 SendRaw {server(icon)}
 return
 
-:c*:{sav::
+:C*:{sav::
 SendRaw {server(icon)}
 return
 
-:c*:{sid::
+:C*:{sid::
 SendRaw {server(id)}
 return
 
-:c*:{sown::
+:C*:{sown::
 SendRaw {server(owner)}
 return
 
-:c*:{sran::
+:C*:{sran::
 SendRaw {server(random)}
 return
 
-:c*:{smem::
+:C*:{smem::
 SendRaw {server(members)}
 return
 
-:c*:{shum::
+:C*:{shum::
 SendRaw {server(humans)}
 return
 
-:c*:{sro::
+:C*:{sro::
 SendRaw {server(roles)}
 return
 
-:c*:{sch::
+:C*:{sch::
 SendRaw {server(channels)}
 return
 
-:c*:{scat::
+:C*:{scat::
 SendRaw {server(created_at)}
 return
 
 ; --- {channel} Object ---
-:c*:{chan::
+:C*:{chan::
 SendRaw {channel}
 return
 
-:c*:{cid::
+:C*:{cid::
 SendRaw {channel(id)}
 return
 
-:c*:{ct::
+:C*:{ct::
 SendRaw {channel(topic)}
 return
 
-:c*:{csm::
+:C*:{csm::
 SendRaw {channel(slowmode)}
 return
 
-:c*:{cpos::
+:C*:{cpos::
 SendRaw {channel(position)}
 return
 
-:c*:{cm::
+:C*:{cm::
 SendRaw {channel(mention)}
 return
 
@@ -199,15 +199,15 @@ return
 ;Action Blocks
 ;---------------------------------
 
-:c*:{del::
+:C*:{del::
 SendRaw {delete}
 return
 
-:c*:{sil::
+:C*:{sil::
 SendRaw {silence}
 return
 
-:c*:{ov::
+:C*:{ov::
 SendRaw {override}
 return
 
@@ -215,11 +215,11 @@ return
 ;Redirection Blocks
 ;---------------------------------
 
-:c*:{dm::
+:C*:{dm::
 SendRaw {dm}
 return
 
-:c*:{red::
+:C*:{red::
 SendRaw {redirect:}
 Send {left}
 return
@@ -228,12 +228,12 @@ return
 ;Use Limiting Blocks
 ;---------------------------------
 
-:c*:{req::
+:C*:{req::
 SendRaw {require():}
 Send {left 3}
 return
 
-:c*:{bl::
+:C*:{bl::
 SendRaw {blacklist():}
 Send {left 3}
 return
@@ -242,12 +242,12 @@ return
 ;Reaction Blocks
 ;---------------------------------
 
-:c*:{rea::
+:C*:{rea::
 SendRaw {react: }
 Send {left}
 return
 
-:c*:{reu::
+:C*:{reu::
 SendRaw {reactu: }
 Send {left}
 return
@@ -256,66 +256,71 @@ return
 ;Specific Command Blocks
 ;---------------------------------
 
-:c*:{crole:: ; Command Role - Role User ID Block
+:C*:{crole:: ; Command Role - Role User ID Block
 SendRaw {c:role {user(id)} }
 Send {left}
 return
 
-:c*:{cra:: ; Command Role Add - Role Add User ID Block
+:C*:{cra:: ; Command Role Add - Role Add User ID Block
 SendRaw {c:role add {user(id)} }
 Send {left}
 return
 
-:c*:{crt:: ;  Command Role Target - Role Add Target ID Block
+:C*:{crt:: ;  Command Role Target - Role Add Target ID Block
 SendRaw {c:role add {target(id)} }
 Send {left}
 return
 
-:c*:{crc:: ; Command Role Custom
+:C*:{crc:: ; Command Role Custom
 SendRaw {c:role custom {user(id)} }
 Send {left}
 return
 
-:c*:{cec:: ; Command Echo
+:C*:{cec:: ; Command Echo
 SendRaw {c:echo }
 Send {left}
 return
 
-:c*:{cem:: ; Command Cembed
+:C*:{cem:: ; Command Cembed
 SendRaw {c:cembed }
 Send {left}
 return
 
+:C*:{cfeed:: ; Command Announce to Feed
+SendRaw {override}
+Send {enter}
+SendRaw {c:feed announce myFeed Message to announce here}
+return
 ;---------------------------------
 ;Condition Blocks
 ;---------------------------------
 
-:c*:{if::
+:C*:{if::
 SendRaw {if():}
 Send {left 3}
 return
 
-:c*:{any::
+:C*:{any::
 SendRaw {any(|):}
 Send {left 4}
 return
 
-:c*:{or::
+:C*:{or::
 SendRaw {or(|):}
 Send {left 4}
 return
 
-:c*:{all::
+:C*:{all::
 SendRaw {and(|):}
 Send {left 4}
 return
 
-:c*:{and::
+:C*:{and::
 SendRaw {and(|):}
 Send, {left 4}
 return
 
-:c*:{break::
+:C*:{break::
 SendRaw {break():}
 Send {left 3}
 return
@@ -324,17 +329,17 @@ return
 ;Variable Blocks (Data Storage)
 ;---------------------------------
 
-:c*:{=::
+:C*:{=::
 SendRaw {=():}
 Send {left 3}
 return
 
-:c*:{var::
+:C*:{var::
 SendRaw {=():}
 Send {left 3}
 return
 
-:c*:{let::
+:C*:{let::
 SendRaw {=():}
 Send {left 3}
 return
@@ -343,12 +348,12 @@ return
 ;Arguments (Parsing)
 ;---------------------------------
 
-:c*:{arg(::
+:C*:{arg(::
 SendRaw {args()}
 Send {left 2}
 return
 
-:c*:{args::
+:C*:{args::
 SendRaw {args}
 return
 
@@ -356,17 +361,17 @@ return
 ;List and Cycle Blocks
 ;---------------------------------
 
-:c*:{li::
+:C*:{li::
 SendRaw {list():}
 Send {left 3}
 return
 
-:c*:{cy::
+:C*:{cy::
 SendRaw {cycle():}
 Send {left 3}
 return
 
-:c*:{dex::
+:C*:{dex::
 SendRaw {index():}
 Send {left 3}
 return
@@ -375,12 +380,12 @@ return
 ;Membership Test Operations (In and Contains)
 ;---------------------------------
 
-:c*:{in::
+:C*:{in::
 SendRaw {in():}
 Send {left 3}
 return
 
-:c*:{con::
+:C*:{con::
 SendRaw {contains():}
 Send {left 3}
 return
@@ -389,27 +394,27 @@ return
 ;Embed Blocks
 ;---------------------------------
 
-:c*:{emt::
+:C*:{emt::
 SendRaw {embed(title):}
 Send {left}
 return
 
-:c*:{emu::
+:C*:{emu::
 SendRaw {embed(url):}
 Send {left}
 return
 
-:c*:{emd::
+:C*:{emd::
 SendRaw {embed(description):}
 Send {left}
 return
 
-:c*:{emc::
+:C*:{emc::
 SendRaw {embed(color):#}
 Send {left}
 return
 
-:c*:{emn::
+:C*:{emn::
 SendRaw {embed(timestamp):now}
 Send {left}
 return
@@ -419,38 +424,38 @@ return
 ;---------------------------------
 
 ; --- Basic Math Block ---
-:c*:{+::
+:C*:{+::
 SendRaw {m:}
 Send {left}
 return
 
 ; --- Mathematical Functions and Variables ---
-:c*:{ma::
+:C*:{ma::
 SendRaw {m:abs()}
 Send {left 2}
 return
 
-:c*:{mr::
+:C*:{mr::
 SendRaw {m:round()}
 Send {left 2}
 return
 
-:c*:{mt::
+:C*:{mt::
 SendRaw {m:trunc()}
 Send {left 2}
 return
 
-:c*:{ms::
+:C*:{ms::
 SendRaw {m:sgn()}
 Send {left 2}
 return
 
-:c*:{mln::
+:C*:{mln::
 SendRaw {m:ln()}
 Send {left 2}
 return
 
-:c*:{mlog::
+:C*:{mlog::
 SendRaw {m:log()}
 Send {left 2}
 return
@@ -460,34 +465,34 @@ return
 ;---------------------------------
 
 ; --- Random Blocks ---
-:c*:{#(:: ; Seeded random block. Puts the cursor on the seed parameter.
+:C*:{#(:: ; Seeded random block. Puts the cursor on the seed parameter.
 SendRaw {#():}
 Send {left 3}
 return
 
-:c*:{rand::
+:C*:{rand::
 SendRaw {#:}
 Send {left}
 return
 
 ; --- Range Blocks ---
-:c*:{rang:: ; range. Defaults to 1 for the lowest number.
+:C*:{rang:: ; range. Defaults to 1 for the lowest number.
 SendRaw {range:1-}
 Send {left}
 return
 
-:c*:{ranf:: ; rangef. Defaults to 1 for the lowest number.
+:C*:{ranf:: ; rangef. Defaults to 1 for the lowest number.
 SendRaw {rangef:1-}
 Send {left}
 return
 
 ; --- 50/50 Blocks ---
-:c*:{50::
+:C*:{50::
 SendRaw {50:}
 Send {left}
 return
 
-:c*:{%::
+:C*:{%::
 SendRaw {`%:}
 Send {left}
 return
@@ -496,7 +501,7 @@ return
 ;Time Blocks
 ;---------------------------------
 ; --- Strf Blocks ---
-:c*:{strf(::
+:C*:{strf(::
 SendRaw {strf():}
 Send {left}
 return
@@ -504,156 +509,156 @@ return
 ; --- Strf % Time Data/Variables (You're going to love that one) ---
 ;	--Weekday--
 ; Mon - %a
-:c*:%wds:: ; Weekday Short
+:C*:%wds:: ; Weekday Short
 SendRaw `%a
 return
 
 ; Monday - %A
-:c*:%wdf:: ; Weekday Full
+:C*:%wdf:: ; Weekday Full
 SendRaw `%A
 return
 
 ; 1 - %w
-:c*:%wdn:: ; Weekday Number/Decimal
+:C*:%wdn:: ; Weekday Number/Decimal
 SendRaw `%w
 return
 
 ;	--Month--
 ; 30 - %d
-:c*:%md:: ; Month Day
+:C*:%md:: ; Month Day
 SendRaw `%d
 return
 
 ; 30 - %-d
-:c*:%0md:: ; Zero-padded Month Day
+:C*:%0md:: ; Zero-padded Month Day
 SendRaw `%-d
 return
 
 ; Sep - %b
-:c*:%ms:: ; Month Short
+:C*:%ms:: ; Month Short
 SendRaw `%b
 return
 
 ; September - %B
-:c*:%mf:: ; Month Full
+:C*:%mf:: ; Month Full
 SendRaw `%B
 return
 
 ; 9 - %m
-:c*:%mn:: ; Month Number
+:C*:%mn:: ; Month Number
 SendRaw `%m
 return
 
 ; 09 - %-m
-:c*:%mn:: ; Zero-padded Month Number
+:C*:%mn:: ; Zero-padded Month Number
 SendRaw `%-m
 return
 
 ;	--Year--
 ; 21 - %y
-:c*:%ys:: ; Year Short
+:C*:%ys:: ; Year Short
 SendRaw `%y
 return
 
 ; 2021 - %Y
-:c*:%yf:: ; Year Full
+:C*:%yf:: ; Year Full
 SendRaw `%Y
 return
 
 ;	--Hour--
 ; 07 - %H
-:c*:%h024:: ; Zero-padded 24-hour clock Hour
+:C*:%h024:: ; Zero-padded 24-hour clock Hour
 SendRaw `%H
 return
 
 ; 7 - %-H
-:c*:%h24:: ; 24-hour clock Hour
+:C*:%h24:: ; 24-hour clock Hour
 SendRaw `%-H
 return
 
 ; 07 - %I
-:c*:%h012:: ; Zero-padded 12-hour clock Hour
+:C*:%h012:: ; Zero-padded 12-hour clock Hour
 SendRaw `%I
 return
 
 ; 7 - %-I
-:c*:%h12:: ; 12-hour clock Hour
+:C*:%h12:: ; 12-hour clock Hour
 SendRaw `%-I
 return
 
 ; AM - %p
-:c*:%am:: ; Locale’s equivalent of either AM or PM
+:C*:%am:: ; Locale’s equivalent of either AM or PM
 SendRaw `%p
 return
 
 ; AM - %p
-:c*:%pm:: ; Locale’s equivalent of either AM or PM (just an alias of the previous one)
+:C*:%pm:: ; Locale’s equivalent of either AM or PM (just an alias of the previous one)
 SendRaw `%p
 return
 
 ;	--Minute--
 ; 06 - %M
-:c*:%min:: ; Minute as a zero-padded decimal number
+:C*:%min:: ; Minute as a zero-padded decimal number
 SendRaw `%M
 return
 
 ;	--Second--
 ; 05 - %S
-:c*:%0s:: ; Second as a zero-padded decimal number
+:C*:%0s:: ; Second as a zero-padded decimal number
 SendRaw `%S
 return
 
 ; 5 - %-S
-:c*:%s:: ; Second as a decimal number
+:C*:%s:: ; Second as a decimal number
 SendRaw `%-S
 return
 
 ;	--Microsecond--
 ; 000000 - %f
-:c*:%mis:: ; Microsecond as a decimal number, zero-padded on the left
+:C*:%mis:: ; Microsecond as a decimal number, zero-padded on the left
 SendRaw `%f
 return
 
 ;	--Day of the Year--
 ; 273 - %j
-:c*:%0yd:: ; Day of the year as a zero-padded decimal number
+:C*:%0yd:: ; Day of the year as a zero-padded decimal number
 SendRaw `%j
 return
 
 ; 273 - %-j
-:c*:%yd:: ; Day of the year as a decimal number
+:C*:%yd:: ; Day of the year as a decimal number
 SendRaw `%-j
 return
 
 ; 273 - %j
-:c*:%doty:: ; Just an alias of the previous one
+:C*:%doty:: ; Just an alias of the previous one
 SendRaw `%j
 return
 
 ;	--Week number--
 ; 39 - %W
-:c*:%wn:: ; Week number of the year (Monday as the first day of the week) as a decimal number. All days in a new year preceding the first Monday are considered to be in week 0
+:C*:%wn:: ; Week number of the year (Monday as the first day of the week) as a decimal number. All days in a new year preceding the first Monday are considered to be in week 0
 SendRaw `%W
 return
 
 ;	--Locale's date and time representation (still in UTC)--
 ; Mon Sep 30 07:06:05 2021 - %c
-:c*:%full:: ; Full date and time 
+:C*:%full:: ; Full date and time 
 SendRaw `%c
 return
 
 ; 09/30/13 - %x
-:c*:%date:: ; Date separated by /
+:C*:%date:: ; Date separated by /
 SendRaw `%x
 return
 
 ; 07:06:05 - %X
-:c*:%time:: ; Time separated by :
+:C*:%time:: ; Time separated by :
 SendRaw `%X
 return
 
 ; --- Timedelta Blocks ---
-:c*:{td(:: ; td with parameter
+:C*:{td(:: ; td with parameter
 SendRaw {td():}
 Send {left 3}
 return
@@ -663,39 +668,39 @@ return
 ;---------------------------------
 
 ; --- Ordinal Abbreviation Blocks ---
-:c*:{rd::
+:C*:{rd::
 SendRaw {ord:}
 Send {left}
 return
 
 ; --- Case Blocks ---
-:c*:{low::
+:C*:{low::
 SendRaw {lower:}
 Send {left}
 return
 
-:c*:{upp::
+:C*:{upp::
 SendRaw {upper:}
 Send {left}
 return
 
 ; --- Text Replacement Blocks ---
-:c*:{join::
+:C*:{join::
 SendRaw {join():}
 Send {left 3}
 return
 
-:c*:{rep::
+:C*:{rep::
 SendRaw {replace():}
 Send {left 3}
 return
 
-:c*:{url::
+:C*:{url::
 SendRaw {urlencode:}
 Send {left}
 return
 
-:c*:{ur+::
+:C*:{ur+::
 SendRaw {urlencode(+):}
 Send {left}
 return
@@ -705,174 +710,174 @@ return
 ;---------------------------------
 
 ;Comments
-:c*:{com::
+:C*:{com::
 SendRaw {=(comment):}
 Send {left}
 return
 
-:c*:{COM::
+:C*:{COM::
 SendRaw, {=(COMMENT):}
 Send {left}
 return
 
 ;Get the number of words in args and define it as a variable
-:c*:{len::
+:C*:{len::
 SendRaw {=(Length):{index(&$):{args} &$}}
 Send {enter}
 return
 
 ;Make the first word of args all lowercase (helpful for standardising input)
-:c*:{l1::
+:C*:{l1::
 SendRaw {=(L1):{lower:{1}}}
-Send {Enter}
+Send {enter}:
 return
 
 ;Make the entirety of args all lowercase (helpful for standardising input)
-:c*:{larg::
+:C*:{larg::
 SendRaw {=(Largs):{lower:{args}}}
-Send {Enter}
+Send {enter}:
 return
 ;Make the first word of args all uppercase (helpful for standardising input)
-:c*:{u1::
+:C*:{u1::
 SendRaw {=(U1):{upper:{1}}}
-Send {Enter}
+Send {enter}:
 return
 
 ;Make the entirety of args all uppercase (helpful for standardising input)
-:c*:{larg::
+:C*:{larg::
 SendRaw {=(Uargs):{upper:{args}}}
-Send {Enter}
+Send {enter}:
 return
 
 ;Outputs "true" if args is a number, outputs "false" otherwise
-:c*:{isnum::
+:C*:{isnum::
 SendRaw {in({m:sgn({args})}):-1 0 1}
 return
 
 ;Converts the current time (or any time in unix form) to any time zone
-:c*:{timezone::
+:C*:{timezone::
 SendRaw {=(offset):}
-Send {Enter}
+Send {enter}:
 SendRaw {=(hins):3600}
-Send {Enter}
+Send {enter}:
 SendRaw {=(output):{strf({m:trunc({unix}+({hins}*{offset}))}):`%-I:`%M `%p}}
 Send {Up 2}
 Send {End}
-Send {Left}
+Send {left}:
 return
 
 ;Generates a random color
-:c*:{randhex::
+:C*:{randhex::
 SendRaw {=(i):#:A,B,C,D,E,F,0,1,2,3,4,5,6,7,8,9}
-Send {Enter}
+Send {enter}:
 SendRaw {=(randomhex):{{i}}{{i}}{{i}}{{i}}{{i}}{{i}}}
 return
 
 ;Sets the embed color to a random color
-:c*:{randemc::
+:C*:{randemc::
 SendRaw {=(i):#:A,B,C,D,E,F,0,1,2,3,4,5,6,7,8,9}
-Send {Enter}
+Send {enter}:
 SendRaw {embed(color):#{{i}}{{i}}{{i}}{{i}}{{i}}{{i}}}
 return
 
 ;Test if {args(1)} is a valid hex color
-:c*:{ishex::
+:C*:{ishex::
 SendRaw {=(uargs):{replace(#,):{upper:{args(1)}}}}
-Send {Enter}
+Send {enter}:
 SendRaw {=(length):{index(`%^&):{replace(, ):{uargs}} `%^&}}
-Send {Enter}
+Send {enter}:
 SendRaw {=(hex2num):{replace(A,10):{replace(B,11):{replace(C,12):{replace(D,13):{replace(E,14):{replace(F,15):{uargs}}}}}}}}
-Send {Enter}
+Send {enter}:
 SendRaw {=(hextest):{m:trunc({join(+):{replace(, ):{hex2num}}})}}
 Send {Enter 2}
 SendRaw {=(error):#{uargs}}
-Send {Enter}
+Send {enter}:
 SendRaw {=(error1):There are 6 characters in a Hexidecimal Color Code (no alpha values), try again.}
-Send {Enter}
+Send {enter}:
 SendRaw {=(error2):Hexidecimal Color Codes should only contain digits 0-9 and letters A-F, there is an invalid character present, try again.}
 Send {Enter 2}
 SendRaw {error{if({length}!=6):1|{if({hextest}!={m:trunc({hextest}/1)}):2}}}
 return
 
 ;Add a cooldown role to the user
-:c*:{cooldown::
+:C*:{cooldown::
 SendRaw {=(cdRole):RoleIDHere}
-Send {Enter}
+Send {enter}:
 SendRaw {=(cdTime):5m}
-Send {Enter}
+Send {enter}:
 SendRaw {blacklist(You need to wait {cdTime} before using the command again.):{cdRole}}
-Send {Enter}
+Send {enter}:
 SendRaw {override}{silence}
-Send {Enter}
+Send {enter}:
 SendRaw {c:temprole {user(id)} {cdTime} {cdRole}}
 Send {Up 5}
 Send {End}
-Send {Left}
+Send {left}:
 return
 
 ;Capitalize the first letter of each word in args
-:c*:{firstcap::
+:C*:{firstcap::
 SendRaw {replace( z, Z):{replace( y, Y):{replace( x, X):{replace( w, W):{replace( v, V):{replace( u, U):{replace( t, T):{replace( s, S):{replace( r, R):{replace( q, Q):{replace( p, P):{replace( o, O):{replace( n, N):{replace( m, M):{replace( l, L):{replace( k, K):{replace( j, J):{replace( i, I):{replace( h, H):{replace( g, G):{replace( f, F):{replace( e, E):{replace( d, D):{replace( c, C):{replace( b, B):{replace( a, A): {args}}}}}}}}}}}}}}}}}}}}}}}}}}}
 return
 
 ;Count the instances of a character in args (character can't be a comma, parentheses, or curly brackets)
-:c*:{count::
+:C*:{count::
 SendRaw {=(charactertocount):}
-Send {Enter}
+Send {enter}:
 SendRaw {=(arglength):{index($`%&):{args} $`%&}}
-Send {Enter}
+Send {enter}:
 SendRaw {=(newarglength):{index($`%&):{replace({charactertocount},. .):{args}} $`%&}}
-Send {Enter}
+Send {enter}:
 SendRaw {=(charactercount):{m:trunc({newarglength}-{arglength})}}
-Send {Enter}
+Send {enter}:
 SendRaw {charactercount} `{charactertocount}` in the args
 Send {Up 5}
 Send {End}
-Send {Left}
+Send {left}:
 return
 
 ;Outputs a target mention, even if args is the target's id
-:c*:{idmen::
+:C*:{idmen::
 SendRaw {if({in(@):{args}}==true):{args}|<@{args}>}
 return
 
 ;Get an animated server icon (use {icon} instead of {server(icon)} in your tag)
-:c*:{aicon::
+:C*:{aicon::
 SendRaw {=(icon):{if({in(a_):{server(icon)}}==true):{replace(png,gif):{server(icon)}}|{server(icon)}}}
 return
 
 ;Round to the nearest number
-:c*:{round::
+:C*:{round::
 SendRaw {=(numtoround):}
-Send {Enter}
+Send {enter}:
 SendRaw {=(decplace):3}
-Send {Enter}
+Send {enter}:
 SendRaw {m:round({num}*(10^{decplace}))/(10^{decplace})}
 Send {Up 2}
 Send {End}
-Send {Left}
+Send {left}:
 return
 
 ;Send an embed conditionally
-:c*:{embedcond::
+:C*:{embedcond::
 SendRaw {=():}
-Send {Enter}
+Send {enter}:
 SendRaw {{if(boolean):blacklist(Error message that will be send instead of the embed):{server(id)}}}
 Send {Home}
 Send {Right 5}
 return
 
 ;Switch method
-:c*:{switch::
+:C*:{switch::
 SendRaw {=(l1):{lower:{1}}}
-Send {Enter}
+Send {enter}:
 SendRaw {=({l1}):Error message here}
-Send {Enter}
+Send {enter}:
 SendRaw {=():Output for first variable}
-Send {Enter}
+Send {enter}:
 SendRaw {=():Output for second variable}
-Send {Enter}
+Send {enter}:
 SendRaw {=():Output for third variable}
-Send {Enter}
+Send {enter}:
 SendRaw {{l1}}
 return
