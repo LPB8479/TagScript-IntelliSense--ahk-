@@ -12,9 +12,13 @@ Autocompletion for many commonly-used code snippets and tips made by the communi
 
 ### How to use:
 1. Download [AutoHotkey](https://www.autohotkey.com/download/).
-2. Download the `TagScript_IntelliSense.ahk` file from this repo and save to your hard drive.
-3. To use the script, double-click on the script file on your hard drive.
-4. If you'd like for the script to automatically run whenever you turn on your pc:<br>
+2. Open File Explorer to the folder you want to save the script to.
+3. Right-click → New → AutoHotkey Script. Name the file as you wish.
+4. Right-click on the file → Edit Script. This should open a text editor window.
+5. Open the `TagScript_IntelliSense.ahk` file in this repo and copy its contents to your clipboard.
+6. Paste the contents of the script to the text editor. (The text editor will contain some default text. This is already included in the script, so you can remove it before pasting.)
+7. To use the script, double-click on the script file on your hard drive.
+8. If you'd like for the script to automatically run whenever you turn on your pc:<br>
    &nbsp;&nbsp;&nbsp; a. Locate the script in File Explorer<br>
    &nbsp;&nbsp;&nbsp; b. Create a shortcut for the file<br>
    &nbsp;&nbsp;&nbsp; c. Type `Win + R`<br>
