@@ -1,25 +1,22 @@
 # TagScript-IntelliSense-(AutoHotkey)
-An AutoHotkey script to aid in writing custom commands for Carl-bot using TagScript. Made by Asty`#8926 and LPB#8479.
-##### ⚠ IMPORTANT: This reminder system uses AutoHotkey, which only works on Windows devices.
-
-README INCOMPLETE
+#### Made by Asty`#8926 and LPB#8479
+An AutoHotkey script to aid in writing custom commands for Carl-bot using TagScript. Works in any program you want.
+##### ⚠ IMPORTANT: This system uses AutoHotkey, which only works on Windows devices.
 
 ### Features:
-Autocompletion for all TagScript blocks and strf formatting codes
-
+Autocompletion for all TagScript blocks and strf formatting codes<br>
 <img src="https://i.imgur.com/ECXLn56.gif" alt="Largs" width="393" height="92">
 
-Autocompletion for commonly-used code snippets and tips made by the community
-
+Autocompletion for commonly-used code snippets and tips made by the community<br>
 <img src="https://i.imgur.com/JiyVYxx.gif" alt="Largs" width="360" height="90.75">
 
 ### How to use:
 1. Download [AutoHotkey](https://www.autohotkey.com/download/).
 2. Download the `TagScript_IntelliSense.ahk` file and save to your hard drive.
 3. To use the script, double-click on the script file on your hard drive.
-4. If you'd like for the script to automatically run whenever you turn on your pc:
-   1. Locate the script in File Explorer
-   3. Create a shortcut for the file
-   4. Type `[Win] + [R]`
-   5. Type `shell:startup` and press `[Enter]`
-   6. Move the shortcut into the startup folder
+4. If you'd like for the script to automatically run whenever you turn on your pc:<br>
+   &nbsp;&nbsp;&nbsp; a. Locate the script in File Explorer<br>
+   &nbsp;&nbsp;&nbsp; b. Create a shortcut for the file<br>
+   &nbsp;&nbsp;&nbsp; c. Type `Win + R`<br>
+   &nbsp;&nbsp;&nbsp; d. Type `shell:startup` and press `Enter`<br>
+   &nbsp;&nbsp;&nbsp; e. Move the shortcut into the startup folder<br>
