@@ -20,5 +20,6 @@ Autocompletion for many commonly-used code snippets and tips made by the communi
    &nbsp;&nbsp;&nbsp; c. Type `Win + R`<br>
    &nbsp;&nbsp;&nbsp; d. Type `shell:startup` and press `Enter`<br>
    &nbsp;&nbsp;&nbsp; e. Move the shortcut into the startup folder<br>
+For documentation outlining the shortcuts for each block, click on the Wiki tab above (coming soon)
 <hr>
 Pull requests and issues are open, so you are welcome to ask questions, report problems, and modify the script as needed.
