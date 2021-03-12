@@ -3,6 +3,8 @@ An AutoHotkey script to aid in writing custom commands for Carl-bot using TagScr
 ##### ⚠ IMPORTANT: This reminder system uses AutoHotkey, which only works on Windows devices.
 [Download AutoHotkey](https://www.autohotkey.com/download/)
 
+DESCRIPTION INCOMPLETE
+
 ### Features:
 Autocompletion for all TagScript blocks and strf formatting codes
 <img src="https://i.imgur.com/ECXLn56.gif" alt="Largs" width="393" height="92">
