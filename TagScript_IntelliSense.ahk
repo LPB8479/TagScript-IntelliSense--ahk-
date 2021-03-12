@@ -869,9 +869,9 @@ return
 
 ;Switch method
 :C*:{switch::
-SendRaw {=(l1):{lower:{1}}}
+SendRaw {=(L1):{lower:{1}}}
 Send {enter}:
-SendRaw {=({l1}):Error message here}
+SendRaw {=({L1}):Error message here}
 Send {enter}:
 SendRaw {=():Output for first variable}
 Send {enter}:
@@ -879,5 +879,5 @@ SendRaw {=():Output for second variable}
 Send {enter}:
 SendRaw {=():Output for third variable}
 Send {enter}:
-SendRaw {{l1}}
+SendRaw {{L1}}
 return
