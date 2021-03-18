@@ -870,14 +870,14 @@ return
 ;Switch method
 :C*:{switch::
 SendRaw {=(L1):{lower:{1}}}
-Send {enter}:
+Send {enter}
 SendRaw {=({L1}):Error message here}
-Send {enter}:
+Send {enter}
 SendRaw {=():Output for first variable}
-Send {enter}:
+Send {enter}
 SendRaw {=():Output for second variable}
-Send {enter}:
+Send {enter}
 SendRaw {=():Output for third variable}
-Send {enter}:
+Send {enter}
 SendRaw {{L1}}
 return
