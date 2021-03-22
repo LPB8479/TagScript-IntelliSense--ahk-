@@ -729,24 +729,24 @@ return
 ;Make the first word of args all lowercase (helpful for standardising input)
 :C*:{l1::
 SendRaw {=(L1):{lower:{1}}}
-Send {enter}:
+Send {enter}
 return
 
 ;Make the entirety of args all lowercase (helpful for standardising input)
 :C*:{larg::
 SendRaw {=(Largs):{lower:{args}}}
-Send {enter}:
+Send {enter}
 return
 ;Make the first word of args all uppercase (helpful for standardising input)
 :C*:{u1::
 SendRaw {=(U1):{upper:{1}}}
-Send {enter}:
+Send {enter}
 return
 
 ;Make the entirety of args all uppercase (helpful for standardising input)
 :C*:{larg::
 SendRaw {=(Uargs):{upper:{args}}}
-Send {enter}:
+Send {enter}
 return
 
 ;Outputs "true" if args is a number, outputs "false" otherwise
@@ -757,43 +757,43 @@ return
 ;Converts the current time (or any time in unix form) to any time zone
 :C*:{timezone::
 SendRaw {=(offset):}
-Send {enter}:
+Send {enter}
 SendRaw {=(hins):3600}
-Send {enter}:
+Send {enter}
 SendRaw {=(output):{strf({m:trunc({unix}+({hins}*{offset}))}):`%-I:`%M `%p}}
 Send {Up 2}
 Send {End}
-Send {left}:
+Send {left}
 return
 
 ;Generates a random color
 :C*:{randhex::
 SendRaw {=(i):#:A,B,C,D,E,F,0,1,2,3,4,5,6,7,8,9}
-Send {enter}:
+Send {enter}
 SendRaw {=(randomhex):{{i}}{{i}}{{i}}{{i}}{{i}}{{i}}}
 return
 
 ;Sets the embed color to a random color
 :C*:{randemc::
 SendRaw {=(i):#:A,B,C,D,E,F,0,1,2,3,4,5,6,7,8,9}
-Send {enter}:
+Send {enter}
 SendRaw {embed(color):#{{i}}{{i}}{{i}}{{i}}{{i}}{{i}}}
 return
 
 ;Test if {args(1)} is a valid hex color
 :C*:{ishex::
 SendRaw {=(uargs):{replace(#,):{upper:{args(1)}}}}
-Send {enter}:
+Send {enter}
 SendRaw {=(length):{index(`%^&):{replace(, ):{uargs}} `%^&}}
-Send {enter}:
+Send {enter}
 SendRaw {=(hex2num):{replace(A,10):{replace(B,11):{replace(C,12):{replace(D,13):{replace(E,14):{replace(F,15):{uargs}}}}}}}}
-Send {enter}:
+Send {enter}
 SendRaw {=(hextest):{m:trunc({join(+):{replace(, ):{hex2num}}})}}
 Send {Enter 2}
 SendRaw {=(error):#{uargs}}
-Send {enter}:
+Send {enter}
 SendRaw {=(error1):There are 6 characters in a Hexidecimal Color Code (no alpha values), try again.}
-Send {enter}:
+Send {enter}
 SendRaw {=(error2):Hexidecimal Color Codes should only contain digits 0-9 and letters A-F, there is an invalid character present, try again.}
 Send {Enter 2}
 SendRaw {error{if({length}!=6):1|{if({hextest}!={m:trunc({hextest}/1)}):2}}}
@@ -802,17 +802,17 @@ return
 ;Add a cooldown role to the user
 :C*:{cooldown::
 SendRaw {=(cdRole):RoleIDHere}
-Send {enter}:
+Send {enter}
 SendRaw {=(cdTime):5m}
-Send {enter}:
+Send {enter}
 SendRaw {blacklist(You need to wait {cdTime} before using the command again.):{cdRole}}
-Send {enter}:
+Send {enter}
 SendRaw {override}{silence}
-Send {enter}:
+Send {enter}
 SendRaw {c:temprole {user(id)} {cdTime} {cdRole}}
 Send {Up 5}
 Send {End}
-Send {left}:
+Send {left}
 return
 
 ;Capitalize the first letter of each word in args
@@ -823,17 +823,17 @@ return
 ;Count the instances of a character in args (character can't be a comma, parentheses, or curly brackets)
 :C*:{count::
 SendRaw {=(charactertocount):}
-Send {enter}:
+Send {enter}
 SendRaw {=(arglength):{index($`%&):{args} $`%&}}
-Send {enter}:
+Send {enter}
 SendRaw {=(newarglength):{index($`%&):{replace({charactertocount},. .):{args}} $`%&}}
-Send {enter}:
+Send {enter}
 SendRaw {=(charactercount):{m:trunc({newarglength}-{arglength})}}
-Send {enter}:
+Send {enter}
 SendRaw {charactercount} `{charactertocount}` in the args
 Send {Up 5}
 Send {End}
-Send {left}:
+Send {left}
 return
 
 ;Outputs a target mention, even if args is the target's id
@@ -848,20 +848,20 @@ return
 
 ;Round to the nearest number
 :C*:{round::
-SendRaw {=(numtoround):}
-Send {enter}:
-SendRaw {=(decplace):3}
-Send {enter}:
-SendRaw {m:round({num}*(10^{decplace}))/(10^{decplace})}
+SendRaw {=(number):}
+Send {enter}
+SendRaw {=(decimal):3}
+Send {enter}
+SendRaw {=(rounded):{m:round({num}*(10^{number}))/(10^{decimal})}}
 Send {Up 2}
 Send {End}
-Send {left}:
+Send {left}
 return
 
 ;Send an embed conditionally
 :C*:{embedcond::
 SendRaw {=():}
-Send {enter}:
+Send {enter}
 SendRaw {{if(boolean):blacklist(Error message that will be send instead of the embed):{server(id)}}}
 Send {Home}
 Send {Right 5}
