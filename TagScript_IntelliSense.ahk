@@ -550,7 +550,7 @@ SendRaw `%m
 return
 
 ; 09 - %-m
-:C*:%mn:: ; Zero-padded Month Number
+:C*:%0mn:: ; Zero-padded Month Number
 SendRaw `%-m
 return
 
@@ -604,12 +604,12 @@ return
 
 ;	--Second--
 ; 05 - %S
-:C*:%0s:: ; Second as a zero-padded decimal number
+:C*:%0sec:: ; Second as a zero-padded decimal number
 SendRaw `%S
 return
 
 ; 5 - %-S
-:C*:%s:: ; Second as a decimal number
+:C*:%sec:: ; Second as a decimal number
 SendRaw `%-S
 return
 
@@ -630,9 +630,9 @@ return
 SendRaw `%-j
 return
 
-; 273 - %j
+; 273 - %-j
 :C*:%doty:: ; Just an alias of the previous one
-SendRaw `%j
+SendRaw `%-j
 return
 
 ;	--Week number--
