@@ -89,7 +89,7 @@ return
 SendRaw {target(id)}
 return
 
-:C*:{tm::
+:C*:{tmen::
 SendRaw {target(mention)}
 return
 
@@ -737,6 +737,7 @@ return
 SendRaw {=(Largs):{lower:{args}}}
 Send {enter}
 return
+
 ;Make the first word of args all uppercase (helpful for standardising input)
 :C*:{u1::
 SendRaw {=(U1):{upper:{1}}}
@@ -744,7 +745,7 @@ Send {enter}
 return
 
 ;Make the entirety of args all uppercase (helpful for standardising input)
-:C*:{larg::
+:C*:{uarg::
 SendRaw {=(Uargs):{upper:{args}}}
 Send {enter}
 return
@@ -782,6 +783,12 @@ return
 
 ;Test if {args(1)} is a valid hex color
 :C*:{ishex::
+Goto hextest
+Return
+:C*:{hextest::
+Goto hextest
+return
+hextest:
 SendRaw {=(uargs):{replace(#,):{upper:{args(1)}}}}
 Send {enter}
 SendRaw {=(length):{index(`%^&):{replace(, ):{uargs}} `%^&}}
@@ -843,7 +850,7 @@ return
 
 ;Get an animated server icon (use {icon} instead of {server(icon)} in your tag)
 :C*:{aicon::
-SendRaw {=(icon):{if({in(a_):{server(icon)}}==true):{replace(png,gif):{server(icon)}}|{server(icon)}}}
+SendRaw {if({in(a_):{server(icon)}}==true):{replace(png,gif):{server(icon)}}|{server(icon)}}
 return
 
 ;Round to the nearest number
@@ -852,7 +859,7 @@ SendRaw {=(number):}
 Send {enter}
 SendRaw {=(decimal):3}
 Send {enter}
-SendRaw {=(rounded):{m:round({num}*(10^{number}))/(10^{decimal})}}
+SendRaw {m:round({num}*(10^{number}))/(10^{decimal})}
 Send {Up 2}
 Send {End}
 Send {left}
@@ -880,4 +887,9 @@ Send {enter}
 SendRaw {=():Output for third variable}
 Send {enter}
 SendRaw {{L1}}
+return
+
+;Add commas in numbers
+:C*:{numcomma::
+SendRaw {replace(st,):{replace(nd,):{replace(rd,):{replace(th,):{ord:{args}}}}}}
 return
