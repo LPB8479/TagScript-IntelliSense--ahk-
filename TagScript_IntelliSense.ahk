@@ -503,7 +503,7 @@ return
 ; --- Strf Blocks ---
 :C*:{strf(::
 SendRaw {strf():}
-Send {left}
+Send {left 3}
 return
 
 ; --- Strf % Time Data/Variables (You're going to love that one) ---
@@ -859,7 +859,7 @@ SendRaw {=(number):}
 Send {enter}
 SendRaw {=(decimal):3}
 Send {enter}
-SendRaw {m:round({num}*(10^{number}))/(10^{decimal})}
+SendRaw {m:round({number}*(10^{number}))/(10^{decimal})}
 Send {Up 2}
 Send {End}
 Send {left}
