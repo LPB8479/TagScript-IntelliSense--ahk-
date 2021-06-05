@@ -503,7 +503,7 @@ return
 ; --- Strf Blocks ---
 :C*:{strf(::
 SendRaw {strf():}
-Send {left 3}
+Send {left}
 return
 
 ; --- Strf % Time Data/Variables (You're going to love that one) ---
@@ -768,14 +768,14 @@ Send {left}
 return
 
 ;Generates a random color
-:C*:{randhex::
+:C*:{rcol::
 SendRaw {=(i):#:A,B,C,D,E,F,0,1,2,3,4,5,6,7,8,9}
 Send {enter}
 SendRaw {=(randomhex):{{i}}{{i}}{{i}}{{i}}{{i}}{{i}}}
 return
 
 ;Sets the embed color to a random color
-:C*:{randemc::
+:C*:{remb::
 SendRaw {=(i):#:A,B,C,D,E,F,0,1,2,3,4,5,6,7,8,9}
 Send {enter}
 SendRaw {embed(color):#{{i}}{{i}}{{i}}{{i}}{{i}}{{i}}}
@@ -859,7 +859,7 @@ SendRaw {=(number):}
 Send {enter}
 SendRaw {=(decimal):3}
 Send {enter}
-SendRaw {m:round({number}*(10^{number}))/(10^{decimal})}
+SendRaw {m:round({num}*(10^{number}))/(10^{decimal})}
 Send {Up 2}
 Send {End}
 Send {left}
