@@ -1,8 +1,8 @@
 # TagScript-IntelliSense-(AutoHotkey)
 #### Made by Asty`#8926 and LPB#8479
 An AutoHotkey script to aid in writing custom commands for Carl-bot using TagScript. Works in any program you want - not limited to coding workspaces.
-##### ⚠ IMPORTANT: This system uses AutoHotkey, which only works on Windows devices.
 ###### More user-friendly version coming soon!
+##### ⚠ IMPORTANT: This system uses AutoHotkey, which only works on Windows devices.
 
 ### Features:
 Autocompletion for all TagScript blocks and strf formatting codes<br>
